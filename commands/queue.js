@@ -1,7 +1,7 @@
 DisTube = require('distube');
 
 module.exports.run = async (bot, message, args) => {
-    if (!message.member.voice.channel) return message.channel.send('Je moet in een spraakkanaal zitten om deze command te gebruiken!');
+    if (!message.member.voice.channel) return message.channel.send('You must be in a voice channel to use this command.');
 
     let queue = await bot.distube.getQueue(message);
 
